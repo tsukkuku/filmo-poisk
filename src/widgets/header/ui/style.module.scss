@@ -1,0 +1,61 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 55px;
+}
+
+.Logo {
+  color: var(--text-color);
+  font-size: 32px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.Navigation__Menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.Navigation__List ul {
+  @extend .Navigation__Menu;
+  gap: 10px;
+
+  li a {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: rgba(67, 67, 67, 0.6);
+    }
+  }
+}
+
+.Login {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 8px;
+}
+
+.HeaderIcon {
+  min-height: 34px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 8px;
+  transition: 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    background: rgba(137, 137, 137, 0.2);
+  }
+}

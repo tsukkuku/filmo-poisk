@@ -1,6 +1,30 @@
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+}
+
+[data-theme="light"] {
+  --bg-color: var(--color-white);
+  --text-color: var(--color-black);
+  --bg-button: var(--color-black);
+  --button-text: var(--color-white);
+  --favorite-icon: var(--color-black);
+}
+
+[data-theme="dark"] {
+  --bg-color: #0f0f10;
+  --text-color: var(--color-white);
+  --bg-button: var(--color-white);
+  --button-text: var(--color-black);
+  --favorite-icon: var(--color-white);
+}
+
 #root,
 html,
 body {
+  background: var(--bg-color);
+  color: var(--text-color);
   font-family: "Noto Sans", sans-serif;
   font-size: 16px;
+  transition: 0.3s;
 }
