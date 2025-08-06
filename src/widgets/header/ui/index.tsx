@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
-
 import { Button } from "@/shared/ui";
-import { SwitchButton } from "@/features/switch-theme";
 import { FiBookmark } from "react-icons/fi";
-
+import { SwitchButton } from "@/features/switch-theme";
 import style from "./style.module.scss";
 
 export const Header = () => {

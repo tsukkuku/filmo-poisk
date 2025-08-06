@@ -1,0 +1,11 @@
+.Slides {
+  width: 250px;
+
+  &:first-child {
+    margin-left: 60px;
+  }
+
+  &:last-child {
+    margin-right: 60px !important;
+  }
+}
