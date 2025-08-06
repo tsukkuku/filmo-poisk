@@ -37,16 +37,3 @@
   top: 40%;
   margin-right: 25px;
 }
-
-.SwiperButton {
-  background-color: var(--bg-button);
-  border-radius: 10px;
-  z-index: 10;
-  width: 50px;
-  height: 70px;
-
-  &:disabled {
-    opacity: 0 !important;
-    cursor: auto;
-  }
-}
