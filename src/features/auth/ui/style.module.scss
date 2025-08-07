@@ -1,0 +1,51 @@
+.YandexAuth__Button {
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 24px;
+  transition: 0.4s;
+
+  &:hover {
+    transform: scale(1.07);
+  }
+}
+
+.Verification {
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.InputSection {
+  width: 100%;
+}
+
+.YandexLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .LogoText {
+    transform: translateX(-3px);
+  }
+}
+
+.underText {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: gray;
+}
+
+.ErrorMessage {
+  margin-top: 5px;
+  text-align: center;
+  color: red;
+  font-size: 14px;
+  font-weight: 700;
+}

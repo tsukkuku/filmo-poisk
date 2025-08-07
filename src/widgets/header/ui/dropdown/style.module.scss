@@ -1,0 +1,28 @@
+.DropDown {
+  position: absolute;
+  top: 45px;
+  min-width: 150px;
+  background-color: var(--bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.DropDown__Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.DropDown__Button {
+  width: 100%;
+  padding: 12px 16px;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 500;
+
+  &:hover {
+    background-color: rgba(137, 137, 137, 0.2);
+  }
+}
