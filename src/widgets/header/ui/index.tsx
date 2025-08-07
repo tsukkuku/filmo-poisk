@@ -6,7 +6,7 @@ import { SwitchButton } from "@/features/switch-theme";
 import { useModal } from "@/shared/lib";
 import { useAuth } from "../lib";
 import { YandexAuth } from "@/features/auth";
-import { Profile } from "./profile/ui";
+import { Profile } from "./profile";
 
 import style from "./style.module.scss";
 

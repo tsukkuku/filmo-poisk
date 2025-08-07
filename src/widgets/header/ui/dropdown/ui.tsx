@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
-import style from "./style.module.scss";
 import { useAppDispatch } from "@/shared/lib";
 import { logout } from "@/features/auth/model";
+import style from "./style.module.scss";
 
 interface DropDownProps {
   isOpen: boolean;

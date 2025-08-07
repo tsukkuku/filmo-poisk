@@ -1,9 +1,10 @@
+import { useState } from "react";
+
 import { getProfileInfo } from "@/features/auth/lib";
 import { useAppSelector } from "@/shared/lib";
 import { DropDown } from "../dropdown";
 
 import style from "./style.module.scss";
-import { useState } from "react";
 
 export const Profile = () => {
   const token = useAppSelector((state) => state.auth.token);
