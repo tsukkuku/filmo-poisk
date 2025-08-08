@@ -2,7 +2,7 @@ import { getLocalStorage } from "@/shared/lib";
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 const initialState = {
-  token: getLocalStorage("token", null),
+  token: getLocalStorage("yandex-token", null),
 };
 
 export const authSlice = createSlice({
@@ -11,14 +11,13 @@ export const authSlice = createSlice({
   reducers: {
     login: (state, action: PayloadAction<string>) => {
       state.token = action.payload;
-      localStorage.setItem("token", JSON.stringify(state.token));
+      localStorage.setItem("yandex-token", JSON.stringify(state.token));
     },
     logout: (state) => {
       state.token = null;
-      localStorage.removeItem("token");
+      localStorage.removeItem("yandex-token");
     },
   },
 });
 
 export const { login, logout } = authSlice.actions;
-export default authSlice.reducer;

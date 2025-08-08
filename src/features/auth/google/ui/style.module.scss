@@ -1,0 +1,18 @@
+.GoogleAuth__Button {
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 24px;
+  margin-bottom: 25px;
+  transition: 0.4s;
+
+  &:hover {
+    transform: scale(1.07);
+  }
+}
+
+.LogoText {
+  transform: translateX(-5px);
+}

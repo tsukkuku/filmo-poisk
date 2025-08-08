@@ -1,9 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import type { ProfileInfo } from "./types";
+import { useAppSelector } from "@/shared/lib";
 
-export const getProfileInfo = (token: string) => {
+export const getYandexInfo = () => {
+  const token = useAppSelector((state) => state.auth.token);
+
   const [profile, setIsProfile] = useState<ProfileInfo | null>(null);
+
   useEffect(() => {
     const profileInfo = async () => {
       try {
@@ -24,5 +28,6 @@ export const getProfileInfo = (token: string) => {
       profileInfo();
     }
   }, [token]);
+
   return profile;
 };

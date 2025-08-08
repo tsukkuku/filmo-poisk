@@ -1,14 +1,15 @@
 import { useEffect, useRef } from "react";
 import { useAppDispatch } from "@/shared/lib";
-import { logout } from "@/features/auth/model";
+import { googleLogout, logout } from "@/features/auth";
 import style from "./style.module.scss";
 
 interface DropDownProps {
   isOpen: boolean;
   onClose: () => void;
+  isYandex: boolean;
 }
 
-export const DropDown = ({ isOpen, onClose }: DropDownProps) => {
+export const DropDown = ({ isOpen, onClose, isYandex }: DropDownProps) => {
   const dispatch = useAppDispatch();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -34,7 +35,7 @@ export const DropDown = ({ isOpen, onClose }: DropDownProps) => {
             <div className={style.DropDown__Button}>История</div>
             <div
               className={style.DropDown__Button}
-              onClick={() => dispatch(logout())}
+              onClick={() => dispatch(isYandex ? logout() : googleLogout())}
             >
               Выйти
             </div>

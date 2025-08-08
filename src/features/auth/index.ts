@@ -1,4 +1,9 @@
-import { authSlice } from "./model";
+export { getGoogleInfo } from "./google/lib/get-info";
 
-export { YandexAuth } from "./ui";
-export const authReducer = authSlice.reducer;
+export { getYandexInfo } from "./yandex/lib/get-info";
+
+export { googleLogout } from "./google/model";
+
+export { logout } from "./yandex/model";
+
+export { AuthModal } from "./ui";

@@ -1,13 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { api } from "@/shared/api";
 import { themeReducer } from "@/features/switch-theme";
-import { authReducer } from "@/features/auth";
+import { authReducer } from "@/features/auth/yandex";
+import { googleReducer } from "@/features/auth/google";
 import { modalReducer } from "@/shared/ui";
 
 export const store = configureStore({
   reducer: {
     theme: themeReducer,
     auth: authReducer,
+    google: googleReducer,
     modal: modalReducer,
     [api.reducerPath]: api.reducer,
   },

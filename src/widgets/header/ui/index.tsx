@@ -1,18 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Button, Modal } from "@/shared/ui";
+import { Button } from "@/shared/ui";
 import { FiBookmark } from "react-icons/fi";
 import { SwitchButton } from "@/features/switch-theme";
 
+import { AuthModal } from "@/features/auth";
 import { useModal } from "@/shared/lib";
 import { useAuth } from "../lib";
-import { YandexAuth } from "@/features/auth";
 import { Profile } from "./profile";
 
 import style from "./style.module.scss";
 
 export const Header = () => {
   const { isAuth } = useAuth();
-  const { isOpen, open, close } = useModal();
+  const { open } = useModal();
   const navigate = useNavigate();
 
   const redirect = () => {
@@ -54,9 +54,7 @@ export const Header = () => {
           <FiBookmark size={20} onClick={redirect} />
         </div>
         {isAuth ? <Profile /> : <Button onClick={open}>Войти</Button>}
-        <Modal isOpen={isOpen} onClose={close} title="Авторизация">
-          <YandexAuth />
-        </Modal>
+        <AuthModal />
       </div>
     </header>
   );

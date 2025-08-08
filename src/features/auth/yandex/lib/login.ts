@@ -39,6 +39,7 @@ export const useYandexLogin = (value: string) => {
       });
       dispatch(login(token.data.access_token));
       setError("");
+      setInPage(false);
       close();
     } catch (e) {
       if (value) {
