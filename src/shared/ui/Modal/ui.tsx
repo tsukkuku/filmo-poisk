@@ -12,6 +12,7 @@ interface ModalProps {
 export const Modal = ({ title, isOpen, onClose, children }: ModalProps) => {
   return (
     <div
+      data-testid="modal"
       className={clsx(style.Modal, isOpen ? style.active : "")}
       onClick={onClose}
     >
