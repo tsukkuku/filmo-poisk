@@ -22,8 +22,11 @@ export const GoogleAuth = () => {
       className={style.GoogleAuth__Button}
       onClick={() => getAccessToken()}
     >
-      Войти через <FcGoogle size={28} />
-      <span className={style.LogoText}>oogle</span>
+      Войти через
+      <div className={style.GoogleLogo}>
+        <FcGoogle size={28} className={style.Logo} />
+        <span className={style.LogoText}>oogle</span>
+      </div>
     </Button>
   );
 };

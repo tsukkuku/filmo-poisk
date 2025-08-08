@@ -3,16 +3,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
   font-size: 24px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   transition: 0.4s;
 
   &:hover {
-    transform: scale(1.07);
+    transform: translateY(-3px);
   }
 }
 
-.LogoText {
-  transform: translateX(-5px);
+.GoogleLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+
+  .Logo {
+    transform: translateY(1px);
+  }
+
+  .LogoText {
+    transform: translateX(-3px);
+  }
 }
