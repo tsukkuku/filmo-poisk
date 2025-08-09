@@ -19,7 +19,7 @@ export const Genres = () => {
           <SwiperSlide className={style.GenreSlides}>
             <div className={style.GenreButton}>
               <Link to={"/"} className={style.GenreLink}>
-                {genre.genre}
+                {genre.icon} {genre.genre}
               </Link>
             </div>
           </SwiperSlide>

@@ -27,7 +27,6 @@
 
 .GenreButton {
   width: 100%;
-  text-align: center;
   background: var(--genre-button);
   border: 1px solid var(--border-color);
   border-radius: 5px;
@@ -37,5 +36,9 @@
 }
 
 .GenreLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
   color: var(--text-color);
 }
