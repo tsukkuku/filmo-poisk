@@ -1,6 +1,8 @@
 :root {
   --color-black: #000;
   --color-white: #fff;
+  --smooth-black: rgba(0, 0, 0, 0.4);
+  --smooth-white: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="light"] {
@@ -9,6 +11,8 @@
   --bg-button: var(--color-black);
   --button-text: var(--color-white);
   --favorite-icon: var(--color-black);
+  --genre-button: rgba(255, 255, 255, 0.15);
+  --border-color: var(--smooth-black);
 }
 
 [data-theme="dark"] {
@@ -17,6 +21,8 @@
   --bg-button: var(--color-white);
   --button-text: var(--color-black);
   --favorite-icon: var(--color-white);
+  --genre-button: rgba(34, 34, 37, 0.75);
+  --border-color: var(--smooth-white);
 }
 
 #root,

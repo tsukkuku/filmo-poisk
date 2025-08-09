@@ -1,12 +1,12 @@
-export interface Movies {
-  docs: MovieInfo[];
+export interface MovieList {
+  items: MovieInfo[];
 }
 
 export interface MovieInfo {
   id: number;
-  name: string;
+  nameRu: string;
+  nameOriginal: string;
   year: number;
-  poster: {
-    previewUrl: string;
-  };
+  ratingKinopoisk: number;
+  posterUrlPreview: string;
 }

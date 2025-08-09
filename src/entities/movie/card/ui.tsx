@@ -9,8 +9,8 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
   return (
     <div className={style.Photo}>
       <img
-        src={movie.poster.previewUrl}
-        alt={movie.name}
+        src={movie.posterUrlPreview}
+        alt={movie.nameRu}
         className={style.Image}
       />
     </div>
