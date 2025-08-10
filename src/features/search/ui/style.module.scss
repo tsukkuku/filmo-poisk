@@ -1,0 +1,31 @@
+.Search {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  max-width: 1440px;
+  padding-block: 25px;
+  border-radius: 15px;
+}
+
+.SearchContent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.SectionTitle {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  padding-block: 15px;
+}
+
+.NullMessage {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}

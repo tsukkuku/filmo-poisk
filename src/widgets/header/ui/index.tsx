@@ -41,7 +41,7 @@ export const Header = () => {
               <Link to={"/series"}>Сериалы</Link>
             </li>
             <li>
-              <Link to={"/cartoons"}>Мультфильмы</Link>
+              <Link to={"/search"}>Поиск</Link>
             </li>
           </ul>
         </div>

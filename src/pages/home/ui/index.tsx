@@ -1,4 +1,3 @@
-import { SearchInput } from "./search-input";
 import { Genres } from "./genres";
 import { Comedy } from "./comedy";
 import { Family } from "./family";
@@ -9,7 +8,6 @@ import { TopSeries } from "./top-series";
 const Home = () => {
   return (
     <>
-      <SearchInput />
       <Genres />
       <Comedy />
       <Fantasy />
