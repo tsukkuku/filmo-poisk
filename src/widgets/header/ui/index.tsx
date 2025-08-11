@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/shared/ui";
 import { FiBookmark } from "react-icons/fi";
 import { SwitchButton } from "@/features/switch-theme";
+import { Nav } from "./nav";
 
 import { AuthModal } from "@/features/auth";
 import { useModal } from "@/shared/lib";
@@ -29,22 +30,7 @@ export const Header = () => {
         <Link to={"/"} className={style.Logo}>
           FilmoPoisk
         </Link>
-        <div className={style.Navigation__List}>
-          <ul>
-            <li>
-              <Link to={"/"}>Подборка</Link>
-            </li>
-            <li>
-              <Link to={"/films"}>Фильмы</Link>
-            </li>
-            <li>
-              <Link to={"/series"}>Сериалы</Link>
-            </li>
-            <li>
-              <Link to={"/search"}>Поиск</Link>
-            </li>
-          </ul>
-        </div>
+        <Nav />
       </div>
       <div className={style.Login}>
         <div className={style.HeaderIcon}>
