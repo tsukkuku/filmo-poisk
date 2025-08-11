@@ -4,9 +4,11 @@ import { themeReducer } from "@/features/switch-theme";
 import { authReducer } from "@/features/auth/yandex";
 import { googleReducer } from "@/features/auth/google";
 import { modalReducer } from "@/shared/ui";
+import { pageReducer } from "@/features/search";
 
 export const store = configureStore({
   reducer: {
+    page: pageReducer,
     theme: themeReducer,
     auth: authReducer,
     google: googleReducer,

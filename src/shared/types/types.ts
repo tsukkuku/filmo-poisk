@@ -1,4 +1,5 @@
 export interface MovieList {
+  totalPages: number;
   items: MovieInfo[];
 }
 

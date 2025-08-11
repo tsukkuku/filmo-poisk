@@ -1,0 +1,23 @@
+.Button__NotActive {
+  margin: 25px;
+  padding: 20px;
+  position: fixed;
+  opacity: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.GoTop__Button {
+  margin: 25px;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  opacity: 1;
+  transition: 0.3s;
+  pointer-events: all;
+}
