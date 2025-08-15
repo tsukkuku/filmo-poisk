@@ -33,11 +33,13 @@ export const Header = () => {
         <Nav />
       </div>
       <div className={style.Login}>
-        <div className={style.HeaderIcon}>
+        <div className={style.Icons}>
           <SwitchButton />
-        </div>
-        <div className={style.HeaderIcon}>
-          <FiBookmark size={20} onClick={redirect} />
+          <FiBookmark
+            size={20}
+            onClick={redirect}
+            className={style.HeaderIcon}
+          />
         </div>
         {isAuth ? <Profile /> : <Button onClick={open}>Войти</Button>}
         <AuthModal />

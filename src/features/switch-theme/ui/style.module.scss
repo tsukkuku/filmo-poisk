@@ -1,0 +1,15 @@
+.Icon {
+  min-height: 34px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 8px;
+  transition: 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    background: rgba(137, 137, 137, 0.2);
+  }
+}

@@ -28,6 +28,7 @@
 }
 
 .HeaderIcon {
+  min-width: 30px;
   min-height: 34px;
   padding: 5px;
   display: flex;
@@ -41,4 +42,11 @@
     cursor: pointer;
     background: rgba(137, 137, 137, 0.2);
   }
+}
+
+.Icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
