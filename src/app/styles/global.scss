@@ -3,6 +3,8 @@
   --color-white: #fff;
   --smooth-black: rgba(0, 0, 0, 0.4);
   --smooth-white: rgba(255, 255, 255, 0.1);
+  --color-gray: #666666;
+  --bright-gray: #999999;
 }
 
 [data-theme="light"] {
@@ -13,6 +15,7 @@
   --favorite-icon: var(--color-black);
   --genre-button: rgba(255, 255, 255, 0.15);
   --border-color: var(--smooth-black);
+  --second-title: var(--color-gray);
 }
 
 [data-theme="dark"] {
@@ -23,11 +26,14 @@
   --favorite-icon: var(--color-white);
   --genre-button: rgba(34, 34, 37, 0.75);
   --border-color: var(--smooth-white);
+  --second-title: var(--bright-gray);
 }
 
 #root,
 html,
 body {
+  width: 100%;
+  height: 100%;
   background: var(--bg-color);
   color: var(--text-color);
   font-family: "Noto Sans", sans-serif;

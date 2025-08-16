@@ -1,0 +1,113 @@
+.MovieInfo__Section {
+  display: flex;
+  align-items: start;
+}
+
+.MoviePoster {
+  min-width: 360px;
+  min-height: 540px;
+
+  .Poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.MovieInfo {
+  width: 100%;
+  padding-block: 25px;
+  padding-left: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.Block {
+  display: flex;
+}
+
+.InfoTitle {
+  min-width: 175px;
+  color: var(--second-title);
+}
+
+.InfoValue {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.Slogan {
+  color: var(--second-title);
+}
+
+.Actor {
+  position: relative;
+  color: var(--text-color);
+  transition: 0.3s;
+
+  &:hover {
+    color: var(--second-title);
+  }
+
+  &::after {
+    position: absolute;
+    content: ",";
+  }
+
+  &:last-child::after {
+    content: "";
+  }
+}
+
+.SequelsSection {
+  margin-top: 15px;
+}
+
+.SectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.003em;
+}
+
+.Trailer__Container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.WatchButton {
+  min-width: 155px;
+  background-color: var(--bg-button);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.003em;
+  color: var(--button-text);
+  border-radius: 8px;
+  padding: 10px 25px;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.Kinopoisk__Logo {
+  fill: rgb(255, 94, 0);
+}
+
+.Go__Actors {
+  color: rgb(217, 89, 14);
+  cursor: pointer;
+}

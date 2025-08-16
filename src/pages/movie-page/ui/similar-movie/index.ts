@@ -1,0 +1,1 @@
+export { SimilarMovie } from "./ui";

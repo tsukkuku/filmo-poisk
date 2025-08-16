@@ -1,8 +1,7 @@
-import { BAD_RATING, NEUTRAL_RATING } from "@/shared/constants";
 import { memo } from "react";
 import type { MovieInfo } from "@/shared/types";
 import { Link } from "react-router-dom";
-import clsx from "clsx";
+import { MovieRating } from "@/shared/ui";
 import style from "./style.module.scss";
 
 interface MovieCardProps {
@@ -10,25 +9,9 @@ interface MovieCardProps {
 }
 
 export const MovieCard = memo(({ movie }: MovieCardProps) => {
-  const checkRating = (rating: number) => {
-    if (rating <= BAD_RATING) {
-      return style.BadRating;
-    } else if (rating <= NEUTRAL_RATING) {
-      return style.NeutralRating;
-    } else {
-      return style.GreatRating;
-    }
-  };
-
   return (
     <div className={style.Photo}>
-      <Link
-        to={
-          movie.type === "FILM"
-            ? `/film/${movie.kinopoiskId}`
-            : `/series/${movie.kinopoiskId}`
-        }
-      >
+      <Link to={`/film/${movie.kinopoiskId}`}>
         <img
           src={movie.posterUrlPreview}
           alt={movie.nameRu}
@@ -36,14 +19,10 @@ export const MovieCard = memo(({ movie }: MovieCardProps) => {
         />
         {movie.ratingKinopoisk && (
           <div className={style.Rating}>
-            <div
-              className={clsx(
-                style.MovieRating,
-                checkRating(movie.ratingKinopoisk)
-              )}
-            >
-              {movie.ratingKinopoisk.toFixed(1)}
-            </div>
+            <MovieRating
+              rating={movie.ratingKinopoisk}
+              className={style.MovieRating}
+            />
           </div>
         )}
         <div className={style.Overlay}>

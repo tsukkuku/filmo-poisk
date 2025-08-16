@@ -1,0 +1,72 @@
+.MovieFacts {
+  margin-bottom: 40px;
+}
+
+.SectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+}
+
+.WarningMessage {
+  color: var(--second-title);
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.FactList {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.Fact {
+  position: relative;
+  padding-block: 10px;
+  padding-left: 25px;
+  font-size: 16px;
+  line-height: 2rem;
+  letter-spacing: 0.04em;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: gray;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    top: 23px;
+    left: 10px;
+  }
+
+  a {
+    color: var(--text-color);
+    text-decoration: underline;
+
+    &:hover {
+      color: orange;
+    }
+  }
+
+  ul {
+    padding-left: 40px;
+  }
+
+  li {
+    list-style: circle;
+  }
+}
+
+.Spoiler {
+  color: red;
+}
+
+.LoadMore__Button {
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.05);
+  }
+}

@@ -1,0 +1,1 @@
+export { MovieFacts } from "./ui";

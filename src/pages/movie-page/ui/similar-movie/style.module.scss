@@ -1,0 +1,47 @@
+.SimilarMovie__Section {
+  margin-bottom: 35px;
+}
+
+.SimilarMovies {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.SectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+.Similar__Movie {
+  max-width: 250px;
+}
+
+.Link {
+  color: var(---text-color);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.MoviePoster {
+  width: 250px;
+  height: 350px;
+}
+
+.MovieTitle {
+  width: 100%;
+  margin-top: 8px;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 700;
+}

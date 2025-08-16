@@ -1,0 +1,16 @@
+.Row {
+  display: flex;
+}
+
+.Title {
+  min-width: 175px;
+  color: var(--second-title);
+}
+
+.Content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}

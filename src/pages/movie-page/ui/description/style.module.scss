@@ -1,0 +1,21 @@
+.MovieDesc {
+  width: 100%;
+  margin-block: 3rem;
+}
+
+.Desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2rem;
+  letter-spacing: 0.04em;
+  white-space: pre-wrap;
+  color: var(---text-color);
+}
+
+.DescTitle {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
