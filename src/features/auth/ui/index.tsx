@@ -3,6 +3,7 @@ import { useModal } from "@/shared/lib";
 import { Modal } from "@/shared/ui";
 import { YandexAuth } from "../yandex";
 import { GoogleAuth } from "../google";
+import { IoClose } from "react-icons/io5";
 
 export const AuthModal = () => {
   const { isOpen, close } = useModal();
@@ -16,7 +17,12 @@ export const AuthModal = () => {
   }, [isOpen]);
 
   return (
-    <Modal isOpen={isOpen} onClose={close} title="Авторизация">
+    <Modal
+      isOpen={isOpen}
+      onClose={close}
+      title="Авторизация"
+      closeIcon={<IoClose size={30} />}
+    >
       {isShow && <GoogleAuth />}
       <YandexAuth setIsShow={setIsShow} />
     </Modal>

@@ -22,6 +22,7 @@
 }
 
 .ModalContent {
+  position: relative;
   width: 100%;
   max-width: 650px;
   background: var(--bg-color);
@@ -41,6 +42,13 @@
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 3.5rem;
+}
+
+.CloseButton {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  cursor: pointer;
 }
 
 .ModalBody {
