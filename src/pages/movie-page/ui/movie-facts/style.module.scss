@@ -6,14 +6,14 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.004em;
 }
 
 .WarningMessage {
   color: var(--second-title);
   margin-bottom: 10px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .FactList {
@@ -28,7 +28,7 @@
   padding-left: 25px;
   font-size: 16px;
   line-height: 2rem;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.004em;
 
   &::before {
     position: absolute;
