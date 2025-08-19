@@ -1,0 +1,22 @@
+.Spouse {
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: default;
+}
+
+.SpouseName {
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: rgb(255, 119, 0);
+  }
+}
+
+.Divorced {
+  font-size: 14px;
+  color: var(--second-title);
+}

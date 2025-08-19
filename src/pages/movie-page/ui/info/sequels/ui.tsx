@@ -22,7 +22,7 @@ export const Sequels = ({ movie }: SequelsProps) => {
           {movie?.map((movie) => (
             <SwiperSlide className={style.Slide}>
               <div key={movie.filmId} className={style.Movie}>
-                <Link to={`/film/${movie.filmId}`} reloadDocument>
+                <Link to={`/film/${movie.filmId}`}>
                   <img
                     src={movie.posterUrlPreview}
                     alt={movie.nameOriginal}

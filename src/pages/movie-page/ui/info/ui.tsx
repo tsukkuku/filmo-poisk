@@ -10,8 +10,8 @@ import { ageLimit, declineSeasons, mpaaLimit } from "@/pages/movie-page/lib";
 import { formatDate } from "@/shared/lib";
 import { goToActors } from "../actors";
 import { SiKinopoisk } from "react-icons/si";
-import { InfoRow } from "./info-row";
 import { Sequels } from "./sequels";
+import { InfoRow } from "@/widgets/info-row";
 import style from "./style.module.scss";
 
 interface MovieInfoProps {

@@ -1,0 +1,1 @@
+export { SpouseInfo } from "./ui";

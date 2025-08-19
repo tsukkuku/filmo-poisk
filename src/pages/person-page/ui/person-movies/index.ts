@@ -1,0 +1,1 @@
+export { PersonMovies } from "./ui";

@@ -20,11 +20,7 @@ export const SimilarMovie = ({ id }: SimilarMovieProps) => {
             {movie.items
               .map((movie) => (
                 <div key={movie.filmId} className={style.Similar__Movie}>
-                  <Link
-                    to={`/film/${movie.filmId}`}
-                    reloadDocument
-                    className={style.Link}
-                  >
+                  <Link to={`/film/${movie.filmId}`} className={style.Link}>
                     <img
                       src={movie.posterUrlPreview}
                       alt={movie.nameOriginal}

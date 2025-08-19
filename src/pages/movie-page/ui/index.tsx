@@ -11,9 +11,9 @@ import style from "./style.module.scss";
 
 const MoviePage = () => {
   const { id = "" } = useParams();
-  const { data: movie, isLoading } = useGetMovieInfoQuery(id);
+  const { data: movie, isLoading, isFetching } = useGetMovieInfoQuery(id);
 
-  if (isLoading) return <ClipLoader color="var(--text-color)" />;
+  if (isLoading || isFetching) return <ClipLoader color="var(--text-color)" />;
   if (!movie) return <div>Фильм или сериал не найден</div>;
 
   return (

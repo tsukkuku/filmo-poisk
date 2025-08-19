@@ -6,7 +6,7 @@ const Home = lazy(() => import("@/pages/home/ui"));
 const Favorites = lazy(() => import("@/pages/favorites"));
 const Search = lazy(() => import("@/pages/search"));
 const Movie = lazy(() => import("@/pages/movie-page/ui"));
-const Person = lazy(() => import("@/pages/person-page"));
+const Person = lazy(() => import("@/pages/person-page/ui"));
 
 export const router = createBrowserRouter([
   {
