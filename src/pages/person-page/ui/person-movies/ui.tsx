@@ -48,7 +48,7 @@ export const PersonMovies = ({ person }: PersonMoviesProps) => {
         })}
       </div>
       <div className={style.MovieList}>
-        {filterdMovies.length &&
+        {filterdMovies.length > 0 ? (
           filterdMovies.map((movie, index) => (
             <div key={index} className={style.MovieCard}>
               <Link to={`/film/${movie.filmId}`} className={style.MovieLink}>
@@ -69,7 +69,10 @@ export const PersonMovies = ({ person }: PersonMoviesProps) => {
                 />
               </Link>
             </div>
-          ))}
+          ))
+        ) : (
+          <div>Фильмы не найдены</div>
+        )}
       </div>
     </div>
   );

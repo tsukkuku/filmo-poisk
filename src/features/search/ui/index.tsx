@@ -18,7 +18,11 @@ export const Search = () => {
   const debouncedValue = useDebounce(value);
   const { ref: inputRef, inView } = useInView({ threshold: 1 });
 
-  const { data: cinema, isFetching } = useGetCinemaQuery(
+  const {
+    data: cinema,
+    isFetching,
+    isUninitialized,
+  } = useGetCinemaQuery(
     { value: debouncedValue, page },
     {
       skip: !debouncedValue,
@@ -45,16 +49,18 @@ export const Search = () => {
         <>
           <div className={style.SectionTitle}>
             <h1 className={style.Title}>
-              {!movies.length ? "Пока здесь ничего нет :(" : "Фильмы и сериалы"}
+              {isUninitialized && "Пока ничего нет :("}
+              {!movies.length && !isUninitialized && "Ничего не найдено"}
+              {movies.length > 0 && "Фильмы и сериалы"}
             </h1>
           </div>
           <div className={style.SearchContent}>
             {movies.map((movie) => (
               <MovieCard key={movie.kinopoiskId} movie={movie} />
             ))}
-            <div ref={ref} className={style.Loader}>
-              {isFetching && <ClipLoader color="var(--text-color)" size={60} />}
-            </div>
+          </div>
+          <div ref={ref} className={style.Loader}>
+            {isFetching && <ClipLoader color="var(--text-color)" size={60} />}
           </div>
         </>
       )}
