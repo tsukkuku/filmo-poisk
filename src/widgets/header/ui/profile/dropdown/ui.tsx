@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { useAppDispatch } from "@/shared/lib";
 import { googleLogout, logout } from "@/features/auth";
 import style from "./style.module.scss";
+import { Link } from "react-router-dom";
 
 interface DropDownProps {
   isOpen: boolean;
@@ -32,7 +33,9 @@ export const DropDown = ({ isOpen, onClose, isYandex }: DropDownProps) => {
       {isOpen && (
         <div ref={ref} className={style.DropDown}>
           <div className={style.DropDown__Content}>
-            <div className={style.DropDown__Button}>История</div>
+            <Link className={style.DropDown__Button} to={"/history"}>
+              История
+            </Link>
             <div
               className={style.DropDown__Button}
               onClick={() => dispatch(isYandex ? logout() : googleLogout())}

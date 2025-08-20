@@ -6,6 +6,7 @@ import { googleReducer } from "@/features/auth/google";
 import { modalReducer } from "@/shared/ui";
 import { pageReducer } from "@/features/search";
 import { favoriteSlice } from "@/features/favorites";
+import { historySlice } from "@/features/history";
 
 export const store = configureStore({
   reducer: {
@@ -15,6 +16,7 @@ export const store = configureStore({
     google: googleReducer,
     modal: modalReducer,
     favorite: favoriteSlice.reducer,
+    history: historySlice.reducer,
     [api.reducerPath]: api.reducer,
   },
   middleware: (getDefaultMiddleware) =>

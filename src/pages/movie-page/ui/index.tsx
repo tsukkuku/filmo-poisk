@@ -7,11 +7,14 @@ import { Description } from "./description";
 import { SimilarMovie } from "./similar-movie";
 import { MovieFacts } from "./movie-facts";
 import { Actors } from "./actors";
+import { useMovieHistory } from "@/features/history";
 import style from "./style.module.scss";
 
 const MoviePage = () => {
   const { id = "" } = useParams();
   const { data: movie, isLoading, isFetching } = useGetMovieInfoQuery(id);
+
+  useMovieHistory(movie);
 
   if (isLoading || isFetching) return <ClipLoader color="var(--text-color)" />;
   if (!movie) return <div>Фильм или сериал не найден</div>;

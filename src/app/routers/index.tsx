@@ -7,6 +7,7 @@ const Favorites = lazy(() => import("@/pages/favorites"));
 const Search = lazy(() => import("@/pages/search"));
 const Movie = lazy(() => import("@/pages/movie-page/ui"));
 const Person = lazy(() => import("@/pages/person-page/ui"));
+const History = lazy(() => import("@/pages/history"));
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
       { index: true, Component: Home },
       { path: "favorites", Component: Favorites },
       { path: "search", Component: Search },
+      { path: "history", Component: History },
       { path: "film/:id", Component: Movie },
       { path: "name/:id", Component: Person },
     ],
