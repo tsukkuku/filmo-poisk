@@ -1,4 +1,4 @@
-import { useAuth } from "@/widgets/header/lib";
+import { useAuth } from "@/shared/lib";
 import { FavoritePage } from "./ui";
 import { Navigate } from "react-router-dom";
 

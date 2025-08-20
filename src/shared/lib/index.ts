@@ -1,3 +1,5 @@
+export { useAuth } from "./use-auth/use-auth";
+
 export { formatDate } from "./format-date/format-date";
 
 export { useModal } from "./use-modal/use-modal";

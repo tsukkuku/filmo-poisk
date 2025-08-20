@@ -1,3 +1,30 @@
 export const BAD_RATING = 4.9;
 export const NEUTRAL_RATING = 6.9;
 export const GREAT_RATING = 10;
+
+export const GENRES = [
+  { id: 1, genre: "триллер" },
+  { id: 2, genre: "драма" },
+  { id: 3, genre: "криминал" },
+  { id: 4, genre: "мелодрама" },
+  { id: 5, genre: "детектив" },
+  { id: 6, genre: "фантастика" },
+  { id: 7, genre: "приключения" },
+  { id: 8, genre: "биография" },
+  { id: 9, genre: "фильм-нуар" },
+  { id: 10, genre: "вестерн" },
+  { id: 11, genre: "боевик" },
+  { id: 12, genre: "фэнтези" },
+  { id: 13, genre: "комедия" },
+  { id: 14, genre: "военный" },
+  { id: 15, genre: "история" },
+  { id: 16, genre: "музыка" },
+  { id: 17, genre: "ужасы" },
+  { id: 18, genre: "мультфильм" },
+  { id: 19, genre: "семейный" },
+  { id: 20, genre: "мюзикл" },
+  { id: 21, genre: "спорт" },
+  { id: 22, genre: "документальный" },
+  { id: 23, genre: "короткометражка" },
+  { id: 24, genre: "аниме" },
+];

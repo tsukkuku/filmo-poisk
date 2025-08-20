@@ -1,0 +1,60 @@
+.FilteredSelect {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.SearchInput {
+  width: 100%;
+  max-width: 300px;
+}
+
+.Select {
+  width: 100%;
+  max-width: 250px;
+  padding: 12px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.Number {
+  width: 120px;
+  padding: 12px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+@media (max-width: 1024px) {
+  .SearchInput {
+    max-width: 260px;
+  }
+  .Select {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 850px) {
+  .FilteredSelect {
+    flex-wrap: wrap;
+  }
+  .SearchInput {
+    max-width: 100%;
+  }
+  .Select {
+    max-width: calc(50% - 8px);
+  }
+}
+
+@media (max-width: 530px) {
+  .Select {
+    max-width: 100%;
+  }
+  .Number {
+    width: 100%;
+  }
+}

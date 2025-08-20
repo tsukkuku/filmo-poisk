@@ -1,0 +1,71 @@
+.FavoritePage {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-block: 25px;
+}
+
+.Titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.Title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.MovieList {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.Filters {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.Empty {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 30px 60px;
+}
+
+@media (max-width: 1024px) {
+  .Title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 850px) {
+  .Filters {
+    padding-inline: 35px;
+    gap: 8px;
+  }
+  .Title {
+    padding-inline: 35px;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Title {
+    font-size: 20px;
+  }
+  .Empty {
+    padding: 20px;
+    font-size: 16px;
+  }
+}

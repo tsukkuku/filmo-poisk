@@ -9,9 +9,9 @@ import { Link } from "react-router-dom";
 import { ageLimit, declineSeasons, mpaaLimit } from "@/pages/movie-page/lib";
 import { formatDate } from "@/shared/lib";
 import { goToActors } from "../actors";
-import { SiKinopoisk } from "react-icons/si";
 import { Sequels } from "./sequels";
 import { InfoRow } from "@/widgets/info-row";
+import { FavoriteImage } from "@/features/favorites";
 import style from "./style.module.scss";
 
 interface MovieInfoProps {
@@ -39,26 +39,7 @@ export const MovieInfo = ({ id, movie }: MovieInfoProps) => {
 
   return (
     <div className={style.MovieInfo__Section}>
-      <div className={style.MoviePoster}>
-        <img
-          src={movie.posterUrlPreview}
-          alt={movie.nameOriginal}
-          className={style.Poster}
-        />
-        <div className={style.Trailer__Container}>
-          <Link to={movie.webUrl} target="_blank" className={style.WatchButton}>
-            Смотреть
-          </Link>
-          <Link
-            to={`https://widgets.kinopoisk.ru/discovery/film/${id}?onlyPlayer=1&autoplay=1`}
-            target="_blank"
-            className={style.WatchButton}
-          >
-            Трейлер
-            <SiKinopoisk className={style.Kinopoisk__Logo} />
-          </Link>
-        </div>
-      </div>
+      <FavoriteImage id={id} movie={movie} />
       <div className={style.MovieInfo}>
         <InfoRow title="Год производства">
           {movie.year}{" "}

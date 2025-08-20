@@ -1,0 +1,32 @@
+.Trailer__Container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.WatchButton {
+  min-width: 155px;
+  background-color: var(--bg-button);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.003em;
+  color: var(--button-text);
+  border-radius: 8px;
+  padding: 10px 25px;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.Kinopoisk__Logo {
+  fill: rgb(255, 94, 0);
+}

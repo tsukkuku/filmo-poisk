@@ -5,6 +5,7 @@ import { authReducer } from "@/features/auth/yandex";
 import { googleReducer } from "@/features/auth/google";
 import { modalReducer } from "@/shared/ui";
 import { pageReducer } from "@/features/search";
+import { favoriteSlice } from "@/features/favorites";
 
 export const store = configureStore({
   reducer: {
@@ -13,6 +14,7 @@ export const store = configureStore({
     auth: authReducer,
     google: googleReducer,
     modal: modalReducer,
+    favorite: favoriteSlice.reducer,
     [api.reducerPath]: api.reducer,
   },
   middleware: (getDefaultMiddleware) =>
