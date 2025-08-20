@@ -1,0 +1,42 @@
+.MobileMenu {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.MobileMenuContent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  max-width: 360px;
+  height: 100%;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transform: translateX(100%);
+  transition: 0.3s;
+  z-index: 100;
+}
+
+.MobileAuth {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Open {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 100;
+}
+
+.Open .MobileMenuContent {
+  transform: translateX(0%);
+}

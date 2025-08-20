@@ -3,11 +3,13 @@ import { Button } from "@/shared/ui";
 import { FiBookmark } from "react-icons/fi";
 import { SwitchButton } from "@/features/switch-theme";
 import { Nav } from "./nav";
+import { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
 
 import { AuthModal } from "@/features/auth";
-import { useModal } from "@/shared/lib";
-import { useAuth } from "../lib";
+import { useAuth, useModal } from "@/shared/lib";
 import { Profile } from "./profile";
+import { MobileMenu } from "./mobile-menu";
 
 import style from "./style.module.scss";
 
@@ -15,6 +17,7 @@ export const Header = () => {
   const { isAuth } = useAuth();
   const { open } = useModal();
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const redirect = () => {
     if (!isAuth) {
@@ -24,13 +27,18 @@ export const Header = () => {
     }
   };
 
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <header className={style.Header}>
       <div className={style.Navigation__Menu}>
         <Link to={"/"} className={style.Logo}>
           FilmoPoisk
         </Link>
-        <Nav />
+        <div className={style.DesktopNav}>
+          <Nav />
+        </div>
       </div>
       <div className={style.Login}>
         <div className={style.Icons}>
@@ -40,10 +48,17 @@ export const Header = () => {
             onClick={redirect}
             className={style.HeaderIcon}
           />
+          <Button className={style.MenuToggle} onClick={toggleMenu}>
+            {menuOpen ? <FiX size={22} /> : <FiMenu size={22} />}
+          </Button>
         </div>
-        {isAuth ? <Profile /> : <Button onClick={open}>Войти</Button>}
+        <div className={style.DesktopAuth}>
+          {isAuth ? <Profile /> : <Button onClick={open}>Войти</Button>}
+        </div>
         <AuthModal />
       </div>
+
+      <MobileMenu menuOpen={menuOpen} closeMenu={closeMenu} />
     </header>
   );
 };

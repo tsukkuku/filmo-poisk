@@ -19,10 +19,20 @@
   gap: 25px;
 }
 
+.DesktopNav {
+  display: block;
+}
+
 .Login {
   width: 100%;
   display: flex;
   justify-content: end;
+  align-items: center;
+  gap: 8px;
+}
+
+.DesktopAuth {
+  display: flex;
   align-items: center;
   gap: 8px;
 }
@@ -49,4 +59,36 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
+}
+
+.MenuToggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+@media (max-width: 850px) {
+  .DesktopNav {
+    display: none;
+  }
+  .DesktopAuth {
+    display: none;
+  }
+  .MenuToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .Header {
+    padding: 16px 20px;
+  }
+  .Logo {
+    font-size: 26px;
+  }
 }
