@@ -1,19 +1,29 @@
-import { useMemo, useState, useEffect } from "react";
-import { Button, Input } from "@/shared/ui";
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { useDebounce } from "@/features/search/lib";
+import type { MoviePageInfo } from "@/shared/types";
 import { GENRES } from "@/shared/constants";
-import type { MoviePageInfo } from "@/pages/movie-page/api";
+import { Button, Input } from "@/shared/ui";
+import clsx from "clsx";
 import style from "./style.module.scss";
 
 interface FilteredSelectProps {
   movies: MoviePageInfo[];
   onChange: (filtered: MoviePageInfo[]) => void;
+  className?: string;
 }
 
-export const Filters = ({ movies, onChange }: FilteredSelectProps) => {
-  const [search, setSearch] = useState("");
+export const Filters = ({
+  movies,
+  onChange,
+  className,
+}: FilteredSelectProps) => {
+  const [value, setValue] = useState("");
+  const search = useDebounce(value);
   const [sort, setSort] = useState("rating");
   const [type, setType] = useState("all");
   const [genre, setGenre] = useState("all");
+  const [searchParams] = useSearchParams();
 
   const filteredAndSorted = useMemo(() => {
     const query = search.trim().toLowerCase();
@@ -57,20 +67,27 @@ export const Filters = ({ movies, onChange }: FilteredSelectProps) => {
     onChange(filteredAndSorted);
   }, [filteredAndSorted, onChange]);
 
+  useEffect(() => {
+    const urlGenre = searchParams.get("genre");
+    if (urlGenre && urlGenre !== genre) {
+      setGenre(urlGenre);
+    }
+  }, [searchParams]);
+
   const resetFilters = () => {
-    setSearch("");
+    setValue("");
     setSort("rating");
     setType("all");
     setGenre("all");
   };
 
   return (
-    <div className={style.FilteredSelect}>
+    <div className={clsx(style.FilteredSelect, className)}>
       <div className={style.SearchInput}>
         <Input
           placeholder="Поиск по названию"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
         />
       </div>
       <select

@@ -1,4 +1,4 @@
-import type { MoviePageInfo } from "@/pages/movie-page/api";
+import type { MoviePageInfo } from "@/shared/types";
 import style from "./style.module.scss";
 
 interface DescriptionProps {

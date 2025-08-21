@@ -1,4 +1,4 @@
-import type { MoviePageInfo } from "@/pages/movie-page/api";
+import type { MoviePageInfo } from "@/shared/types";
 
 export interface FavoriteState {
   movies: MoviePageInfo[];

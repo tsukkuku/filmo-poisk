@@ -1,9 +1,9 @@
+import type { MoviePageInfo } from "@/shared/types";
 import {
   useGetPersonsInfoQuery,
   useGetPremiereInfoQuery,
   useGetSequelsMovieQuery,
   useGetSerialSeasonsQuery,
-  type MoviePageInfo,
 } from "@/pages/movie-page/api";
 import { Link } from "react-router-dom";
 import { ageLimit, declineSeasons, mpaaLimit } from "@/pages/movie-page/lib";

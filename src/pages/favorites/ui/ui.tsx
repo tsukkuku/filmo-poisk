@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { useAppSelector } from "@/shared/lib";
 import { MovieCard } from "@/entities/movie/card";
 import { Filters } from "@/widgets/filters";
@@ -8,8 +8,6 @@ export const FavoritePage = () => {
   const movies = useAppSelector((state) => state.favorite.movies);
   const [filtered, setFiltered] = useState(movies);
 
-  const filteredAndSorted = useMemo(() => filtered, [filtered]);
-
   return (
     <div className={style.FavoritePage}>
       <div className={style.Titles}>
@@ -18,9 +16,9 @@ export const FavoritePage = () => {
           <Filters movies={movies} onChange={setFiltered} />
         </div>
       </div>
-      {filteredAndSorted.length > 0 ? (
+      {filtered.length > 0 ? (
         <div className={style.MovieList}>
-          {filteredAndSorted.map((movie) => (
+          {filtered.map((movie) => (
             <MovieCard movie={movie} key={movie.kinopoiskId} />
           ))}
         </div>

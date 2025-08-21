@@ -5,11 +5,11 @@ import {
   useModal,
 } from "@/shared/lib";
 import { addMovie, inFavorite } from "../model";
-import type { MoviePageInfo } from "@/pages/movie-page/api";
 import { WatchButtons } from "./watch-buttons";
 import { Toaster } from "react-hot-toast";
 import style from "./style.module.scss";
 import { Button } from "@/shared/ui";
+import type { MoviePageInfo } from "@/shared/types";
 
 interface FavoriteImageProps {
   id: string;

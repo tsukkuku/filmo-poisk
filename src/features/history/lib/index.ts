@@ -1,7 +1,7 @@
-import type { MoviePageInfo } from "@/pages/movie-page/api";
 import { useAppDispatch } from "@/shared/lib";
 import { useEffect } from "react";
 import { addToHistory } from "../model/slice";
+import type { MoviePageInfo } from "@/shared/types";
 
 export const useMovieHistory = (movie?: MoviePageInfo) => {
   const dispatch = useAppDispatch();

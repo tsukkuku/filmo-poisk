@@ -1,7 +1,7 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { HistoryState } from "./types";
 import { getLocalStorage } from "@/shared/lib";
-import type { MoviePageInfo } from "@/pages/movie-page/api";
+import type { MoviePageInfo } from "@/shared/types";
 
 const initialState: HistoryState = {
   movie: getLocalStorage("history", []),

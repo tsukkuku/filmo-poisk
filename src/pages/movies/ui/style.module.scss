@@ -1,0 +1,42 @@
+.FilmsPage {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.FiltersFilms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FilmList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.PageButton {
+  padding: 0 25px 25px 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.Pagination {
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.Active {
+  background-color: orangered;
+}

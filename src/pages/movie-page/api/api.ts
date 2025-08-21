@@ -1,7 +1,7 @@
 import { api } from "@/shared/api";
+import type { MoviePageInfo } from "@/shared/types";
 import type {
   MovieFacts,
-  MoviePageInfo,
   PersonInfo,
   PremiereInfo,
   SequelMovie,

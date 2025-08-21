@@ -1,8 +1,8 @@
 import { getLocalStorage } from "@/shared/lib";
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { FavoriteState } from "./types";
-import type { MoviePageInfo } from "@/pages/movie-page/api";
 import { showToast } from "../lib";
+import type { MoviePageInfo } from "@/shared/types";
 
 const initialState: FavoriteState = {
   movies: getLocalStorage("favorite-movies", []),
