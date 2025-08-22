@@ -45,3 +45,9 @@
   font-size: 16px;
   font-weight: 700;
 }
+
+@media (max-width: 790px) {
+  .SimilarMovies {
+    justify-content: center;
+  }
+}

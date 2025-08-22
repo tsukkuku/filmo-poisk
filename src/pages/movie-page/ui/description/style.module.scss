@@ -19,3 +19,21 @@
   letter-spacing: 0.004em;
   margin-bottom: 10px;
 }
+
+@media (max-width: 992px) {
+  .MovieDesc {
+    margin-block: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .DescTitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .Desc {
+    font-size: 14px;
+    line-height: 1.7rem;
+  }
+}

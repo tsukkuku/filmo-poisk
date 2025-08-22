@@ -111,3 +111,41 @@
   color: rgb(217, 89, 14);
   cursor: pointer;
 }
+
+@media (max-width: 1200px) {
+  .MoviePoster {
+    min-width: 300px;
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 992px) {
+  .MovieInfo__Section {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .MovieInfo {
+    padding-left: 14rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .MovieInfo__Section {
+    flex-direction: column;
+  }
+
+  .MoviePoster {
+    min-width: 100%;
+    min-height: auto;
+    .Poster {
+      height: auto;
+      max-height: 60vh;
+      object-fit: cover;
+    }
+  }
+
+  .MovieInfo {
+    padding-left: 0;
+  }
+}

@@ -35,7 +35,7 @@ export const FilmCategory = ({ movies }: FilmCategoryProps) => {
         className={style.Swiper}
       >
         {movies.items.map((movie) => (
-          <SwiperSlide key={movie.id} className={style.Slides}>
+          <SwiperSlide key={movie.kinopoiskId} className={style.Slides}>
             <MovieCard movie={movie} />
           </SwiperSlide>
         ))}

@@ -89,3 +89,9 @@
 .MovieRating {
   font-size: 20px;
 }
+
+@media (max-width: 768px) {
+  .ButtonList {
+    padding-inline: 15px;
+  }
+}

@@ -55,3 +55,9 @@
   color: var(--second-title);
   font-size: 14px;
 }
+
+@media (max-width: 1440px) {
+  .Actors {
+    padding-inline: 20px;
+  }
+}

@@ -40,3 +40,9 @@
 .Active {
   background-color: orangered;
 }
+
+@media (max-width: 478px) {
+  .PageButton {
+    flex-wrap: wrap;
+  }
+}

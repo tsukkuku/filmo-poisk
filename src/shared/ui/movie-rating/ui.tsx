@@ -21,7 +21,7 @@ export const MovieRating = ({ className, rating }: MovieRatingProps) => {
   };
   return (
     <div className={clsx(className, checkRating(rating))} data-testid="rating">
-      {rating ? rating.toFixed(1) : "---"}
+      {rating ? rating.toFixed(1) : "-"}
     </div>
   );
 };
