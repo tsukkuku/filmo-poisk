@@ -1,4 +1,4 @@
-import { FactsList } from "@/widgets/facts/ui";
+import { FactsList } from "@/widgets/facts";
 import type { PersonDetails } from "@/pages/person-page/api";
 import style from "./style.module.scss";
 

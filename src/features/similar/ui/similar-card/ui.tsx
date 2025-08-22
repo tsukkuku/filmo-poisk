@@ -12,7 +12,10 @@ export const SimilarCard = ({ id, name }: SimilarCardProps) => {
 
   return (
     <div className={style.Similar}>
-      <Link to={`/film/${data?.items[0].filmId}`} className={style.Link}>
+      <Link
+        to={`/filmo-poisk/film/${data?.items[0].filmId}`}
+        className={style.Link}
+      >
         <img
           src={data?.items[0].posterUrlPreview}
           alt={data?.items[0].nameRu}

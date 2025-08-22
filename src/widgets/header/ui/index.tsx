@@ -23,7 +23,7 @@ export const Header = () => {
     if (!isAuth) {
       open();
     } else {
-      navigate("/favorites");
+      navigate("/filmo-poisk/favorites");
     }
   };
 
@@ -33,7 +33,7 @@ export const Header = () => {
   return (
     <header className={style.Header}>
       <div className={style.Navigation__Menu}>
-        <Link to={"/"} className={style.Logo}>
+        <Link to={"/filmo-poisk"} className={style.Logo}>
           FilmoPoisk
         </Link>
         <div className={style.DesktopNav}>

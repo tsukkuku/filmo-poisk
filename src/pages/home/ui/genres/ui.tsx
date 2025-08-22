@@ -22,7 +22,7 @@ export const Genres = () => {
             <div className={style.GenreButton}>
               <Link
                 to={{
-                  pathname: "/films",
+                  pathname: "/filmo-poisk/films",
                   search: `?genre=${genre.genre.toLowerCase()}`,
                 }}
                 className={style.GenreLink}

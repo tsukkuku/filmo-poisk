@@ -6,10 +6,13 @@ import { Info } from "./info";
 import { Facts } from "./facts/ui";
 import { PersonMovies } from "./person-movies";
 import style from "./style.module.scss";
+import { useTitle } from "@/shared/lib";
 
 const PersonPage = () => {
   const { id = "" } = useParams();
   const { data: person, isLoading, isFetching } = useGetPersonQuery(id);
+
+  useTitle(person ? person?.nameRu || person?.nameEn : "Загрузка...");
 
   if (isLoading || isFetching) return <ClipLoader color="var(--text-color)" />;
   if (!person) return <div>Актер не найден</div>;

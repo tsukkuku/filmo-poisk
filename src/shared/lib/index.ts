@@ -1,3 +1,5 @@
+export { useTitle } from "./use-title/use-title";
+
 export { ModalProvider } from "./modal-provider/modal-provider";
 
 export { useAuth } from "./use-auth/use-auth";

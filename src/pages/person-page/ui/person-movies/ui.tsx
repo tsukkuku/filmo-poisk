@@ -51,7 +51,10 @@ export const PersonMovies = ({ person }: PersonMoviesProps) => {
         {filterdMovies.length > 0 ? (
           filterdMovies.map((movie, index) => (
             <div key={index} className={style.MovieCard}>
-              <Link to={`/film/${movie.filmId}`} className={style.MovieLink}>
+              <Link
+                to={`/filmo-poisk/film/${movie.filmId}`}
+                className={style.MovieLink}
+              >
                 <div className={style.MovieInfo}>
                   <div className={style.MovieName}>
                     {movie.nameRu || movie.nameEn}

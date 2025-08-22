@@ -19,30 +19,3 @@
   flex-wrap: wrap;
   gap: 15px;
 }
-
-.PageButton {
-  padding: 0 25px 25px 25px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-
-.Pagination {
-  transition: 0.3s;
-
-  &:hover {
-    transform: translateY(-3px);
-  }
-}
-
-.Active {
-  background-color: orangered;
-}
-
-@media (max-width: 478px) {
-  .PageButton {
-    flex-wrap: wrap;
-  }
-}

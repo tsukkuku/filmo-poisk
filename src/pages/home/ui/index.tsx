@@ -4,8 +4,11 @@ import { Family } from "./family";
 import { Fantasy } from "./fantasy";
 import { TopMovies } from "./top-movies";
 import { TopSeries } from "./top-series";
+import { useTitle } from "@/shared/lib";
 
 const Home = () => {
+  useTitle("Главная");
+
   return (
     <>
       <Genres />

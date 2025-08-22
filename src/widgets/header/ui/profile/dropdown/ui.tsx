@@ -33,7 +33,10 @@ export const DropDown = ({ isOpen, onClose, isYandex }: DropDownProps) => {
       {isOpen && (
         <div ref={ref} className={style.DropDown}>
           <div className={style.DropDown__Content}>
-            <Link className={style.DropDown__Button} to={"/history"}>
+            <Link
+              className={style.DropDown__Button}
+              to={"/filmo-poisk/history"}
+            >
               История
             </Link>
             <div

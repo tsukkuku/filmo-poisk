@@ -1,1 +1,1 @@
-export { Facts } from "./ui";
+export { FactsList } from "./ui";

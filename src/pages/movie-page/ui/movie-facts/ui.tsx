@@ -1,5 +1,5 @@
 import { useGetMovieFactsQuery } from "@/pages/movie-page/api";
-import { FactsList } from "@/widgets/facts/ui";
+import { FactsList } from "@/widgets/facts";
 import { ClipLoader } from "react-spinners";
 
 interface MovieFactsProps {

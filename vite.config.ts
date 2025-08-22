@@ -5,6 +5,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
+  base: "/filmo-poisk",
   test: {
     environment: "jsdom",
     setupFiles: ["./src/vitest-setup.ts"],

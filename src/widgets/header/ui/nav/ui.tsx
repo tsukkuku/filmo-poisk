@@ -6,13 +6,13 @@ export const Nav = () => {
     <div className={style.Navigation__List}>
       <ul>
         <li>
-          <Link to={"/"}>Главная</Link>
+          <Link to={"/filmo-poisk"}>Главная</Link>
         </li>
         <li>
-          <Link to={"/films"}>Подборка</Link>
+          <Link to={"/filmo-poisk/films"}>Подборка</Link>
         </li>
         <li>
-          <Link to={"/search"}>Поиск</Link>
+          <Link to={"/filmo-poisk/search"}>Поиск</Link>
         </li>
       </ul>
     </div>

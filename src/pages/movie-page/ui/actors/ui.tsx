@@ -27,7 +27,10 @@ export const Actors = ({ id }: ActorsProps) => {
           .map((person) => (
             <SwiperSlide className={style.Slide}>
               <div className={style.ActorCard}>
-                <Link to={`/name/${person.staffId}`} className={style.Link}>
+                <Link
+                  to={`/filmo-poisk/name/${person.staffId}`}
+                  className={style.Link}
+                >
                   <img
                     src={person.posterUrl}
                     alt={person.nameRu || person.nameEn}
