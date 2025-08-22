@@ -1,6 +1,7 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach, describe, expect, test, vi } from "vitest";
 import { Modal } from "./ui";
+import { ModalProvider } from "@/shared/lib";
 
 const mockFunc = vi.fn();
 
@@ -10,9 +11,11 @@ describe("Modal tests", () => {
   });
   test("render Modal", () => {
     render(
-      <Modal isOpen title="Title" onClose={mockFunc}>
-        Content
-      </Modal>
+      <ModalProvider>
+        <Modal isOpen title="Title" onClose={mockFunc}>
+          Content
+        </Modal>
+      </ModalProvider>
     );
     const modal = screen.getByTestId("modal");
     expect(modal).toBeInTheDocument();
@@ -21,18 +24,22 @@ describe("Modal tests", () => {
   });
   test("not render Modal", () => {
     render(
-      <Modal isOpen={false} title="Title" onClose={mockFunc}>
-        Content
-      </Modal>
+      <ModalProvider>
+        <Modal isOpen title="Title" onClose={mockFunc}>
+          Content
+        </Modal>
+      </ModalProvider>
     );
     const modal = screen.getByTestId("modal");
     expect(modal).not.toHaveClass(/modalcontent/i);
   });
   test("close Modal", () => {
     render(
-      <Modal isOpen title="Title" onClose={mockFunc}>
-        Content
-      </Modal>
+      <ModalProvider>
+        <Modal isOpen title="Title" onClose={mockFunc}>
+          Content
+        </Modal>
+      </ModalProvider>
     );
     const modal = screen.getByTestId("modal");
     fireEvent.click(modal);
@@ -41,9 +48,11 @@ describe("Modal tests", () => {
   });
   test("click on content in Modal", () => {
     render(
-      <Modal isOpen title="Title" onClose={mockFunc}>
-        Content
-      </Modal>
+      <ModalProvider>
+        <Modal isOpen title="Title" onClose={mockFunc}>
+          Content
+        </Modal>
+      </ModalProvider>
     );
     const modal = screen.getByText(/content/i);
     fireEvent.click(modal);
@@ -53,9 +62,11 @@ describe("Modal tests", () => {
   });
   test("render Title in Modal", () => {
     render(
-      <Modal isOpen title="Title" onClose={mockFunc}>
-        Content
-      </Modal>
+      <ModalProvider>
+        <Modal isOpen title="Title" onClose={mockFunc}>
+          Content
+        </Modal>
+      </ModalProvider>
     );
     const modal = screen.getByText(/title/i);
     expect(modal).toHaveTextContent(/title/i);

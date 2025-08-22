@@ -1,3 +1,5 @@
+export { ModalProvider } from "./modal-provider/modal-provider";
+
 export { useAuth } from "./use-auth/use-auth";
 
 export { formatDate } from "./format-date/format-date";

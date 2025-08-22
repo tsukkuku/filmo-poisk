@@ -1,32 +1,16 @@
 import { act, renderHook } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
 import { useModal } from "./use-modal";
-import { Provider } from "react-redux";
-import { configureStore } from "@reduxjs/toolkit";
-import type { ReactNode } from "react";
-import { modalReducer } from "@/shared/ui";
-
-const mockStore = configureStore({
-  reducer: {
-    modal: modalReducer,
-  },
-  preloadedState: {
-    modal: { isOpen: false },
-  },
-});
-
-const wrapper = ({ children }: { children: ReactNode }) => (
-  <Provider store={mockStore}>{children}</Provider>
-);
+import { ModalProvider } from "../modal-provider/modal-provider";
 
 describe("useModal hook tests", () => {
   test("check state from redux", () => {
-    const { result } = renderHook(() => useModal(), { wrapper });
+    const { result } = renderHook(() => useModal(), { wrapper: ModalProvider });
 
     expect(result.current.isOpen).toBe(false);
   });
   test("check open function", () => {
-    const { result } = renderHook(() => useModal(), { wrapper });
+    const { result } = renderHook(() => useModal(), { wrapper: ModalProvider });
 
     act(() => {
       result.current.open();
@@ -35,7 +19,7 @@ describe("useModal hook tests", () => {
     expect(result.current.isOpen).toBe(true);
   });
   test("check close function", () => {
-    const { result } = renderHook(() => useModal(), { wrapper });
+    const { result } = renderHook(() => useModal(), { wrapper: ModalProvider });
 
     act(() => {
       result.current.close();
@@ -44,7 +28,7 @@ describe("useModal hook tests", () => {
     expect(result.current.isOpen).toBe(false);
   });
   test("check open & close modal", () => {
-    const { result } = renderHook(() => useModal(), { wrapper });
+    const { result } = renderHook(() => useModal(), { wrapper: ModalProvider });
 
     act(() => {
       result.current.open();
