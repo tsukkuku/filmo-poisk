@@ -31,7 +31,6 @@
   min-height: 450px;
   display: flex;
   flex-direction: column;
-  overflow: auto;
 }
 
 .ModalHeader {
@@ -49,6 +48,13 @@
   top: 25px;
   right: 15px;
   cursor: pointer;
+  border-radius: 8px;
+  max-height: 30px;
+  transition: 0.3s;
+
+  &:hover {
+    background: rgba(137, 137, 137, 0.2);
+  }
 }
 
 .ModalBody {
@@ -56,4 +62,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+@media (max-width: 615px) {
+  .ModalContent {
+    max-height: calc(100dvh - 40px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
 }

@@ -12,10 +12,17 @@
   flex-direction: column;
 }
 
+.PageTitle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
 .Title {
   font-size: 28px;
   font-weight: 700;
-  margin-bottom: 10px;
 }
 
 .MovieList {

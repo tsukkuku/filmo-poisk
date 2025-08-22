@@ -3,6 +3,7 @@ import { useAppSelector } from "@/shared/lib";
 import { MovieCard } from "@/entities/movie/card";
 import { Filters } from "@/widgets/filters";
 import style from "./style.module.scss";
+import { Similar } from "@/features/similar";
 
 export const FavoritePage = () => {
   const movies = useAppSelector((state) => state.favorite.movies);
@@ -11,7 +12,10 @@ export const FavoritePage = () => {
   return (
     <div className={style.FavoritePage}>
       <div className={style.Titles}>
-        <h2 className={style.Title}>Избранные фильмы и сериалы</h2>
+        <div className={style.PageTitle}>
+          <h2 className={style.Title}>Избранные фильмы и сериалы</h2>
+          <Similar />
+        </div>
         <div className={style.Filters}>
           <Filters movies={movies} onChange={setFiltered} />
         </div>
