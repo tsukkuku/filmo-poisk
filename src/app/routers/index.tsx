@@ -12,7 +12,7 @@ const Movies = lazy(() => import("@/pages/movies/ui"));
 
 export const router = createBrowserRouter([
   {
-    path: "/filmo-poisk",
+    path: "/",
     Component: Layout,
     children: [
       { index: true, Component: Home },

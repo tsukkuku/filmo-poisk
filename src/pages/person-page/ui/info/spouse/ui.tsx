@@ -10,10 +10,7 @@ interface SpouseProps {
 export const SpouseInfo = ({ spouse }: SpouseProps) => {
   return (
     <div className={style.Spouse}>
-      <Link
-        className={style.SpouseName}
-        to={`/filmo-poisk/name/${spouse.personId}`}
-      >
+      <Link className={style.SpouseName} to={`/name/${spouse.personId}`}>
         {spouse.name}
       </Link>
       {spouse.divorced && (

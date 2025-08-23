@@ -7,7 +7,7 @@ const Favorites = () => {
 
   useTitle("Избранное");
 
-  return <>{isAuth ? <FavoritePage /> : <Navigate to={"/filmo-poisk"} />}</>;
+  return <>{isAuth ? <FavoritePage /> : <Navigate to={"/"} />}</>;
 };
 
 export default Favorites;

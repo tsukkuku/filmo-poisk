@@ -7,7 +7,7 @@ const HistoryPage = () => {
 
   useTitle("История просмотра");
 
-  return <>{isAuth ? <History /> : <Navigate to={"/filmo-poisk"} />}</>;
+  return <>{isAuth ? <History /> : <Navigate to={"/"} />}</>;
 };
 
 export default HistoryPage;

@@ -57,10 +57,7 @@ export const MovieInfo = ({ id, movie }: MovieInfoProps) => {
           <span className={style.Slogan}>«{movie.slogan || "---"}»</span>
         </InfoRow>
         <InfoRow title="Режиссер">
-          <Link
-            className={style.Actor}
-            to={`/filmo-poisk/name/${person[0].staffId}`}
-          >
+          <Link className={style.Actor} to={`/name/${person[0].staffId}`}>
             {person[0].nameRu || person[0].nameEn}
           </Link>
         </InfoRow>
@@ -72,7 +69,7 @@ export const MovieInfo = ({ id, movie }: MovieInfoProps) => {
               <Link
                 key={actor.staffId}
                 className={style.Actor}
-                to={`/filmo-poisk/name/${actor.staffId}`}
+                to={`/name/${actor.staffId}`}
               >
                 {actor.nameRu || actor.nameEn}
               </Link>

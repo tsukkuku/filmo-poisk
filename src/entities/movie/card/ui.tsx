@@ -11,7 +11,7 @@ interface MovieCardProps {
 export const MovieCard = memo(({ movie }: MovieCardProps) => {
   return (
     <div className={style.Photo}>
-      <Link to={`/filmo-poisk/film/${movie.kinopoiskId}`}>
+      <Link to={`/film/${movie.kinopoiskId}`}>
         <img
           src={movie.posterUrlPreview}
           alt={movie.nameRu}
