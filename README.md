@@ -29,7 +29,7 @@
 
 <img width="1903" height="902" alt="image" src="https://github.com/user-attachments/assets/b22dd767-35a3-4f29-be0e-b343236e5d78" />
 
-***Подборка и сериалов***
+***Подборка фильмов и сериалов***
 
 <img width="1906" height="904" alt="image" src="https://github.com/user-attachments/assets/b1faf5ce-d41a-4168-ac3d-154cda1c0c2e" />
 <img width="1539" height="719" alt="image" src="https://github.com/user-attachments/assets/a6e48342-f07d-466a-8119-94184649e0b1" />
